@@ -5,6 +5,8 @@
     <link rel="stylesheet" href="bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
     
+    <script src="js/jquery.min.js" defer></script>
+    <script src="js/script.js" defer></script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -30,23 +32,23 @@
         <h1>The craft.<br>The atmosphere.</h1>
         <p class="lead">A visual moodboard for LINE: considered details and a welcoming place to sit.</p>
     </section>
-    <section class="container section gallery-grid">
-        <figure>
-            <img src="images/shop.jpg" alt="Barbers working in a brick-walled studio">
+    <section class="container section gallery-grid row g-4">
+        <figure class="col-12">
+            <button class="gallery-open" type="button" aria-label="Enlarge photo"><img src="images/shop.jpg" alt="Barbers working in a brick-walled studio"></button>
             <figcaption>
                 <span>01 / THE SPACE</span>
                 <h2>A seat in the neighbourhood.</h2>
             </figcaption>
         </figure>
-        <figure>
-            <img src="images/cut.jpg" alt="Close attention to a haircut with clippers" loading="lazy">
+        <figure class="col-12">
+            <button class="gallery-open" type="button" aria-label="Enlarge photo"><img src="images/cut.jpg" alt="Close attention to a haircut with clippers" loading="lazy"></button>
             <figcaption>
                 <span>02 / THE CRAFT</span>
                 <h2>Attention to every detail.</h2>
             </figcaption>
         </figure>
-        <figure>
-            <img src="images/studio.png" alt="Barbers working with customers in a studio" loading="lazy">
+        <figure class="col-12">
+            <button class="gallery-open" type="button" aria-label="Enlarge photo"><img src="images/studio.png" alt="Barbers working with customers in a studio" loading="lazy"></button>
             <figcaption>
                 <span>03 / THE ATMOSPHERE</span>
                 <h2>Good cuts. Good company.</h2>
@@ -54,6 +56,11 @@
         </figure>
     </section>
 </main>
+<dialog id="lightbox" aria-label="Image gallery">
+    <button class="btn" id="close-lightbox" autofocus>Close ×</button>
+    <div class="lightbox-stage"><img id="large-photo" alt=""></div>
+    <div class="lightbox-controls"><button class="btn" id="previous-photo" aria-label="Previous image">←</button><p id="photo-caption" aria-live="polite"></p><button class="btn" id="next-photo" aria-label="Next image">→</button></div>
+</dialog>
 
 <footer>
     <div class="container footer-grid">

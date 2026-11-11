@@ -4,7 +4,9 @@
     <title>Contact | LINE Barber Studio</title>
     <link rel="stylesheet" href="bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
-    <script src="js/booking.js" defer></script>
+
+    <script src="js/jquery.min.js" defer></script>
+    <script src="js/script.js" defer></script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -55,8 +57,8 @@
                 <p>The form checks your details locally. It does not send a message or reserve an appointment.</p>
             </div>
         </aside>
-        <form id="booking">
-            <h2>Plan your visit</h2>
+        <form id="booking" novalidate>
+            <h2>Register & plan your visit</h2>
             <div class="form-grid">
                 <div>
                     <label for="name">Your name</label>
@@ -99,8 +101,19 @@
                     <label for="notes">Notes (optional)</label>
                     <input id="notes" name="notes" maxlength="300" placeholder="Tell us about your preferred style">
                 </div>
+                <div>
+                    <label for="password">Password</label>
+                    <input id="password" type="password" autocomplete="new-password" required minlength="8" aria-describedby="password-help">
+                    <p id="password-help">Use at least 8 characters, uppercase and lowercase letters, a number and a symbol.</p>
+                    <meter id="strength" min="0" max="3" value="0" aria-label="Password strength"></meter>
+                    <p id="strength-label" role="status">Enter a password</p>
+                </div>
+                <div>
+                    <label for="confirm-password">Confirm password</label>
+                    <input id="confirm-password" type="password" autocomplete="new-password" required>
+                </div>
             </div>
-            <button class="btn mt-4" type="submit" disabled id="submit-booking">Check visit details</button>
+            <button class="btn mt-4" type="submit" id="submit-booking">Check visit details</button>
             <noscript>
                 <p>Enable JavaScript to check this demonstration form. No appointment is submitted.</p>
             </noscript>
