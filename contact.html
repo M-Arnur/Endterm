@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contact | LINE Barber Studio</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+
+    <script src="js/jquery.min.js" defer></script>
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+    <div class="container header-inner">
+        <a class="logo" href="index.html">LINE
+            <span>BARBER STUDIO</span>
+        </a>
+        <nav aria-label="Main navigation">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="services.html">Services</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="contact.html" aria-current="page">Contact</a>
+        </nav>
+        <a class="btn booking" href="contact.html#booking">Book a visit</a>
+    </div>
+</header>
+
+<main id="main">
+    <section class="container page-intro">
+        <p class="eyebrow">CONTACT & BOOKING</p>
+        <h1>Make time<br>for a fresh cut.</h1>
+        <p class="lead">Choose a service and your preferred time below.</p>
+    </section>
+    <section class="container section contact-grid">
+        <aside>
+            <h2>Visit the studio.</h2>
+            <p>Astana, Kazakhstan</p>
+            <p>A concept location for this student project.</p>
+            <h3>Opening hours</h3>
+            <dl class="hours">
+                <div>
+                    <dt>Monday–Friday</dt>
+                    <dd>10:00–20:00</dd>
+                </div>
+                <div>
+                    <dt>Saturday</dt>
+                    <dd>12:00–18:00</dd>
+                </div>
+                <div>
+                    <dt>Sunday</dt>
+                    <dd>Closed</dd>
+                </div>
+            </dl>
+            <div class="contact-note">
+                <h3>Student demonstration</h3>
+                <p>The form checks your details locally. It does not send a message or reserve an appointment.</p>
+            </div>
+        </aside>
+        <form id="booking" novalidate>
+            <h2>Register & plan your visit</h2>
+            <div class="form-grid">
+                <div>
+                    <label for="name">Your name</label>
+                    <input id="name" name="name" autocomplete="name" maxlength="80" required placeholder="Full name">
+                </div>
+                <div>
+                    <label for="email">Email</label>
+                    <input id="email" name="email" type="email" autocomplete="email" required placeholder="you@example.com">
+                </div>
+                <div>
+                    <label for="service">Service</label>
+                    <select id="service" name="service" required>
+                        <option value="">Select a service</option>
+                        <option>Signature haircut</option>
+                        <option>Skin fade</option>
+                        <option>Beard shape</option>
+                        <option>Cut + beard</option>
+                        <option>Classic shave</option>
+                        <option>Junior cut</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="date">Preferred date</label>
+                    <input id="date" name="date" type="date" required>
+                </div>
+                <div>
+                    <label for="time">Preferred time</label>
+                    <select id="time" name="time" required>
+                        <option value="">Select a time</option>
+                        <option>10:00</option>
+                        <option>11:30</option>
+                        <option>13:00</option>
+                        <option>14:30</option>
+                        <option>16:00</option>
+                        <option>17:30</option>
+                        <option>18:30</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="notes">Notes (optional)</label>
+                    <input id="notes" name="notes" maxlength="300" placeholder="Tell us about your preferred style">
+                </div>
+                <div>
+                    <label for="password">Password</label>
+                    <input id="password" type="password" autocomplete="new-password" required minlength="8" aria-describedby="password-help">
+                    <p id="password-help">Use at least 8 characters, uppercase and lowercase letters, a number and a symbol.</p>
+                    <meter id="strength" min="0" max="3" value="0" aria-label="Password strength"></meter>
+                    <p id="strength-label" role="status">Enter a password</p>
+                </div>
+                <div>
+                    <label for="confirm-password">Confirm password</label>
+                    <input id="confirm-password" type="password" autocomplete="new-password" required>
+                </div>
+            </div>
+            <button class="btn mt-4" type="submit" id="submit-booking">Check visit details</button>
+            <noscript>
+                <p>Enable JavaScript to check this demonstration form. No appointment is submitted.</p>
+            </noscript>
+            <p id="form-result" role="status" aria-live="polite"></p>
+        </form>
+    </section>
+</main>
+
+<footer>
+    <div class="container footer-grid">
+        <a class="logo" href="index.html">LINE
+            <span>BARBER STUDIO</span>
+        </a>
+        <div>
+            <p>Astana, Kazakhstan</p>
+            <p>Mon–Fri · 10:00–20:00</p>
+        </div>
+        <div><a href="contact.html">Contact & booking</a>
+            <p>
+                <a href="https://www.instagram.com/">Instagram</a> · 
+                <a href="https://www.facebook.com/">Facebook</a>
+            </p>
+        </div>
+    </div>
+    <div class="container footer-bottom">
+        <span>© 2026 LINE Barber. Student concept.</span>
+        <span>Good cuts. Good company.</span>
+    </div>
+</footer>
+
+</body>
+</html>
